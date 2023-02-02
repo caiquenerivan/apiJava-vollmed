@@ -31,9 +31,9 @@ public class PacienteController {
     @PutMapping
     @Transactional
     public void atualizar(@RequestBody @Valid DadosAtualizacaoPaciente dados){
-        var medico = repository.getReferenceById(dados.id());
+        var paciente = repository.getReferenceById(dados.id());
 
-        medico.atualizarInformacoes(dados);
+        paciente.atualizarInformacoes(dados);
     }
 
     @DeleteMapping("/{id}")
